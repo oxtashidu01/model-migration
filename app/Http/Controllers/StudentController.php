@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
+use App\Models\SubjectGrade;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -11,7 +13,9 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        //return Student::all();
+
+        return Students::where('province', 'Illinois')->get;
     }
 
     /**
@@ -61,4 +65,6 @@ class StudentController extends Controller
     {
         //
     }
+
+
 }
